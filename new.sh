@@ -87,7 +87,7 @@ route add default dev ppp0
 wget -qO- http://ipv4.icanhazip.com > ip.txt
 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install cpulimit -y
-git clone https://github.com/tonhue26/ariocppminer.git
+git clone https://github.com/maylene26/ariocppminer.git
 cd ariocppminer
 mv ariocppminer_avx2 dongqn
 chmod 0777 dongqn
