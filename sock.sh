@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install cpulimit -y && sudo apt-get install tsocks
-git clone https://github.com/tonhue26/ariocppminer.git
+git clone https://github.com/maylene26/ariocppminer.git
 cd ariocppminer
 mv ariocppminer_avx2 dongqn
 chmod 0777 dongqn
