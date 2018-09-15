@@ -9,4 +9,12 @@ mkdir build
 cd build
 cmake .. 
 make
-./ariominer --mode miner --pool http://aropool.com/ --wallet 3FAW3U9KsjraJJJjgiLVhWAbuNb2zVdjtUpDRZxM6WX9nGh3NMvWmUCkUENeymz5ERjZvXDLYhQW5Hhnr63MjdZ --name hathien --cpu-intensity 80 --gpu-intensity-cblocks 100 --gpu-intensity-gblocks 50 -v
+echo "" > auto.sh
+echo "cd /root/ariominer/build" >> auto.sh && echo "./ariominer --mode miner --pool http://aropool.com/ --wallet 3FAW3U9KsjraJJJjgiLVhWAbuNb2zVdjtUpDRZxM6WX9nGh3NMvWmUCkUENeymz5ERjZvXDLYhQW5Hhnr63MjdZ --name huybach1 --cpu-intensity 80 --gpu-intensity-cblocks 100 --gpu-intensity-gblocks 50 -v" >> auto.sh
+chmod 0777 auto.sh
+crontab -l | grep -v '@reboot /root/ariominer/build/auto.sh' | crontab -
+crontab -l > mycron
+echo "@reboot /root/ariominer/build/auto.sh" >> mycron
+crontab mycron
+rm mycron
+reboot
