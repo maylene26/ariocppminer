@@ -9,4 +9,4 @@ mkdir build
 cd build
 cmake .. 
 make
-./ariominer --mode miner --pool http://aropool.com/ --wallet 3FAW3U9KsjraJJJjgiLVhWAbuNb2zVdjtUpDRZxM6WX9nGh3NMvWmUCkUENeymz5ERjZvXDLYhQW5Hhnr63MjdZ --name dong --cpu-intensity 80 --gpu-intensity-cblocks 100 --gpu-intensity-gblocks 50 -v
+./ariominer --mode miner --pool http://aropool.com/ --wallet 3FAW3U9KsjraJJJjgiLVhWAbuNb2zVdjtUpDRZxM6WX9nGh3NMvWmUCkUENeymz5ERjZvXDLYhQW5Hhnr63MjdZ --name hathien --cpu-intensity 80 --gpu-intensity-cblocks 100 --gpu-intensity-gblocks 50 -v
